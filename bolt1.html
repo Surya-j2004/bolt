@@ -33,6 +33,32 @@
         }
         .hero {
             margin: 0;
+            position: relative;
+        }
+        .hero .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            filter: blur(5px);
+            z-index: -1;
+        }
+        .hero .text-container {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+        }
+        .hero h1 {
+            color: white;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            color: white;
+            font-size: 18px;
         }
         .services {
             background-color: #f1faee;
@@ -59,6 +85,10 @@
         .service-card h3 {
             color: #007f5f;
         }
+        .ga{
+            background-color:#005f73;
+            color:#edf6f9;
+        }
         .about {
             padding: 40px 20px;
             text-align: center;
@@ -75,7 +105,7 @@
             margin-top: 30px;
         }
         .form-container {
-            padding: 40px 20px;
+            padding: 10px 20px;
             background-color: #f1faee;
             text-align: center;
         }
@@ -107,11 +137,13 @@
             </ul>
         </nav>
         <div class="hero">
-            <h1>Welcome to Our Hospital</h1>
-            <p>Your health is our top priority.</p>
+            <div class="background-image"></div>
+            <div class="text-container">
+                <h1>Welcome to Our Hospital</h1>
+                <p>Your health is our top priority.</p>
+            </div>
         </div>
     </header>
-    
     <section class="services">
         <h2>Our Services</h2>
         <div class="service-container">
@@ -129,137 +161,77 @@
             </div>
         </div>
     </section>
-    
+    <section class="ga"
+    <a href ="videos.html"><center><color :white>Audio Visual Content</color></center></a>
+    </section>
     <section class="about">
         <h2>About Us</h2>
         <p>Our hospital has been providing top-notch healthcare services for over a decade, with a focus on patient care and innovation.</p>
     </section>
-    
     <section class="form-container">
         <h2>Book an Appointment</h2>
         <textarea placeholder="Enter your details here..."></textarea>
         <select>
-            
-            
-                <option selected disabled>Select Month</option>
-            
-                <option value="01">January</option>
-                <option value="02">February</option>
-                <option value="02">March</option>
-                <option value="02">April</option>
-                <option value="02">May</option>
-                <option value="02">June</option>
-                <option value="02">July</option>
-                <option value="02">August</option>
-                <option value="02">September</option>
-                <option value="02">October</option>
-                <option value="02">November</option>
-                <option value="02">December</option>
-            </select>
-            <select>
-                <option selected disabled>Select Day</option>
-                <option value="02">Monday</option>
-                <option value="02">Tuesday</option>
-                <option value="02">Wednesday</option>
-                <option value="02">Thursday</option>
-                <option value="02">Friday</option>
-                <option value="02">Saturday</option>
-                <option value="02">Sunday</option>
-                <?php
-                for ($day = 1; $day <= 31; $day++) {
-                    echo "<option value=\"$day\">$day</option>";
-                }
-                ?>
-            </select>
-            <select>
-                <option selected disabled>Select Year</option>
-                <option value="02">2021</option>
-                <option value="02">2022</option>
-                <option value="02">2023</option>
-                <option value="02">2024</option>
-                <option value="02">2025</option>
-                <option value="02">2026</option>
-                <option value="02">2027</option>
-                <option value="02">2028</option>
-                <option value="02">2029</option>
-                <option value="02">2030</option>
-                <?php
-                for ($year = 2000; $year <= 2100; $year++) {
-                    echo "<option value=\"$year\">$year</option>";
-                }
-                ?>
-            </select>
-            
-            <?php
-            for ($year = 2000; $year <= 2100; $year++) {
-                for ($month = 1; $month <= 12; $month++) {
-                    for ($day = 1; $day <= 31; $day++) {
-                        // Validate date
-                        if (checkdate($month, $day, $year)) {
-                            // Format date as YYYY-MM-DD
-                            $date = sprintf("%04d-%02d-%02d", $year, $month, $day);
-                            // Output option
-                        
-                        }
-                    }
-                }
-            }
-            ?>
-        </select><br>
-        <button>Submit</button>
-    </section>
-
-    <section class="form-container">
-        <h2>View Patient Records</h2>
-        <textarea placeholder="Enter patient ID or name to retrieve records..."></textarea>
-        
-        <select>
             <option selected disabled>Select Month</option>
-            
             <option value="01">January</option>
             <option value="02">February</option>
-            <option value="02">March</option>
-            <option value="02">April</option>
-            <option value="02">May</option>
-            <option value="02">June</option>
-            <option value="02">July</option>
-            <option value="02">August</option>
-            <option value="02">September</option>
-            <option value="02">October</option>
-            <option value="02">November</option>
-            <option value="02">December</option>
-            
-           
+            <option value="03">March</option>
+            <option value="04">April</option>
+            <option value="05">May</option>
+            <option value="06">June</option>
+            <option value="07">July</option>
+            <option value="08">August</option>
+            <option value="09">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
         </select>
         <select>
             <option selected disabled>Select Day</option>
-
-            
             <?php
             for ($day = 1; $day <= 31; $day++) {
                 echo "<option value=\"$day\">$day</option>";
-                <option value="02">Monday</option>
-                <option value="02">Tuesday</option>
-                <option value="02">Wednesday</option>
-                <option value="02">Thursday</option>
-                <option value="02">Friday</option>
-                <option value="02">Saturday</option>
-                <option value="02">Sunday</option>
             }
             ?>
         </select>
         <select>
             <option selected disabled>Select Year</option>
-            <option value="02">2021</option>
-            <option value="02">2022</option>
-            <option value="02">2023</option>
-            <option value="02">2024</option>
-            <option value="02">2025</option>
-            <option value="02">2026</option>
-            <option value="02">2027</option>
-            <option value="02">2028</option>
-            <option value="02">2029</option>
-            <option value="02">2030</option>
+            <?php
+            for ($year = 2000; $year <= 2100; $year++) {
+                echo "<option value=\"$year\">$year</option>";
+            }
+            ?>
+        </select><br>
+        <button>Submit</button>
+    </section>
+    <section class="form-container">
+        <h2>View Patient Records</h2>
+        <textarea placeholder="Enter patient ID or name to retrieve records..."></textarea>
+        <select>
+            <option selected disabled>Select Month</option>
+            <option value="01">January</option>
+            <option value="02">February</option>
+            <option value="03">March</option>
+            <option value="04">April</option>
+            <option value="05">May</option>
+            <option value="06">June</option>
+            <option value="07">July</option>
+            <option value="08">August</option>
+            <option value="09">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+        </select>
+        <select>
+            <option selected disabled>Select Day</option>
+            <?php
+            for ($day = 1; $day <= 31; $day++) {
+                echo "<option value=\"$day\">$day</option>";
+            }
+            ?>
+        </select>
+        <select>
+            <option selected disabled>Select Year</option>
             <?php
             for ($year = 2000; $year <= 2100; $year++) {
                 echo "<option value=\"$year\">$year</option>";
@@ -268,9 +240,26 @@
         </select><br>
         <button>Retrieve Records</button>
     </section>
-    
     <footer>
         <p>Contact us: (123) 456-7890 | info@ourhospital.com</p>
     </footer>
+    <script>
+        // Blur and add text to the hero image
+        window.addEventListener('DOMContentLoaded', function () {
+            var hero = document.querySelector('.hero');
+            var imageUrl = "image.jpg"; // Replace with the path to your image
+            
+            
+            var background = document.createElement('div');
+            background.classList.add('background-image');
+            background.style.backgroundImage = 'url(' + imageUrl + ')';
+            hero.appendChild(background);
+            
+            var textContainer = document.createElement('div');
+            textContainer.classList.add('text-container');
+            textContainer.innerHTML = '<h2 style="color: white; font-size: 24px;">ABC Hospital - Serving millions since 2000</h2>';
+            hero.appendChild(textContainer);
+        });
+    </script>
 </body>
 </html>
