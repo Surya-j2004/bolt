@@ -46,6 +46,7 @@
     font-weight: bold;
     text-align: center;
     margin-bottom: 20px;
+    color: black; /* Result text color */
   }
 </style>
 </head>
@@ -116,19 +117,20 @@
 
   // Function to check answer
   function checkAnswer(option, correctAnswer, button) {
+    const buttons = button.parentElement.querySelectorAll('button');
+    buttons.forEach(btn => {
+      btn.disabled = true;
+      if (btn.innerHTML === correctAnswer) {
+        btn.classList.add("correct");
+      } else if (btn.innerHTML === option) {
+        btn.classList.add("incorrect");
+      }
+    });
+
     if (option === correctAnswer) {
       score++;
-      button.classList.add("correct");
-    } else {
-      button.classList.add("incorrect");
-      // Find the correct button and mark it
-      const correctButton = Array.from(button.parentElement.children).find(btn => btn.innerHTML === correctAnswer);
-      correctButton.classList.add("correct");
     }
-    // Disable further clicks after answer selection
-    const buttons = document.querySelectorAll('.options button');
-    buttons.forEach(button => button.disabled = true);
-    
+
     updateResult();
   }
 
