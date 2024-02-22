@@ -2,66 +2,45 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #005f73;
-    color: #f1faee;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-.header {
-    background-color: #005f73;
-    color: #f1faee;
-    padding: 40px 0;
+header, footer {
+    padding: 20px;
     text-align: center;
 }
 
-.header h1 {
-    margin: 0;
-}
-
-.header p {
-    margin: 10px 0;
-}
-
-.camps {
-    padding: 40px 0;
-}
-
 .camp {
-    background-color: #f1faee;
+    background-color: #d1d5d0;
+    padding: 40px;
+    margin: 20px 0;
+    border-radius: 10px;
+    margin-left: 100px;
+    align-items:center;
+    width:80%;
+}
+
+.camp h2 {
     color: #005f73;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
-
-.camp h3 {
-    margin: 0;
-}
-
-.date,
-.location {
-    font-weight: bold;
 }
 
 .btn {
     display: inline-block;
     padding: 10px 20px;
+    margin-top: 20px;
     background-color: #005f73;
     color: #f1faee;
     text-decoration: none;
     border-radius: 5px;
 }
 
-.footer {
-    background-color: #005f73;
-    color: #f1faee;
-    text-align: center;
-    padding: 10px 0;
+.registration-form {
+    padding: 80px 0;
+    background-color: #eae2b7;
+}
+
+footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+    height:0px;
 }
