@@ -6,64 +6,33 @@
     <title>Hospital Homepage</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        body {
-    /* Set background image */
-    background-image: url(main.jpg);
-    /* Ensure the background image covers the entire viewport */
-    background-size: cover;
-    /* Position the background image */
-    background-position: center;
-    /* Set a minimum height for the body */
-    min-height: 100vh;
-    /* Make sure the body takes up the entire viewport */
-    margin: 0;
-    /* Positioning and sizing for the pseudo-element */
-    position: relative;
-  } 
-  
-   body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(0,0,0, 0.6); 
-    pointer-events: none;
-
-} 
         body, html {
             margin: 0;
             padding: 0;
             font-family: 'Montserrat', sans-serif;
-            color: white;
-            position: relative;
+            color: #333;
         }
         header {
+            background-image:linear-gradient(#005f73,#9aced8);
             color: #edf6f9;
             padding: 20px 0;
             text-align: center;
-            position: relative;
         }
         h2,p{
             align:center;
-            position: relative;
         }
         nav ul {
             list-style: none;
             padding: 0;
-            position: relative;
         }
         nav ul li {
             display: inline;
             margin: 0 20px;
-            position: relative;
         }
         nav ul li a {
             color: #edf6f9;
             text-decoration: none;
             font-weight: bold;
-            position: relative;
         }
         .hero {
             margin: 0;
@@ -77,13 +46,18 @@
             height: 100%;
             background-size: cover;
             background-position: center;
-            position: relative;
             filter: blur(5px);
             z-index: -1;
+        }
+        a:link{
+            color:#1c5b54;
         }
         a:hover{
             color: #99faee;
 
+        }
+        a:visited{
+            color:#000000;
         }
         .hero .text-container {
             position: relative;
@@ -94,74 +68,65 @@
             color: white;
             font-size: 36px;
             margin-bottom: 10px;
-            position: relative;
         }
         .hero p {
             color: white;
             font-size: 18px;
-            position: relative;
         }
         .services {
+            background-color:#edf6f9;;
             padding: 40px 20px;
             text-align: center;
-            position: relative;
         }
         .services h2 {
             color: #006d77;
             margin-bottom: 30px;
-            position: relative;
         }
         .service-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
-            position: relative;
         }
         .service-card {
+            background-color: #ffffff;
             padding: 20px;
             width: 280px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             border-radius: 8px;
-            position: relative;
         }
         .service-card h3 {
             color: #007f5f;
-            position: relative;
         }
         .ga{
             background-color:#005f73;
             color:#edf6f9;
-            position: relative;
         }
         .about {
             padding: 40px 20px;
             text-align: center;
-            position: relative;
+            background-color: #eae2b7;
         }
         .about h2 {
             color: #003049;
-            position: relative;
         }
         footer {
+            background-color: #005f73;
             color: #edf6f9;
             text-align: center;
             padding: 20px;
             margin-top: 30px;
-            position: relative;
         }
         .form-container {
             padding: 10px 20px;
-            
+            background-color: #f1faee;
             text-align: center;
-            position: relative;
         }
         .form-container textarea, .form-container select {
             width: 80%;
             height: 40px;
             margin-bottom: 20px;
             padding: 10px;
-            position: relative;
         }
         .form-container button {
             padding: 10px 20px;
@@ -170,7 +135,6 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            position: relative;
         }
     </style>
 </head>
@@ -217,20 +181,20 @@
             </div>
         </div>
     </section>
-    <section class="ga"
+   <!-- <section class="ga"
     <section class="video">
         <a href="videos.html">
             <div class="video-link">
                 <h2><center>Watch Our Videos</center></h2>
-                <p><center>Explore our multimedia content for a deeper understanding of our services.</center></p>
+                <p><center></center>Explore our multimedia content for a deeper understanding of our services.</p>
             </div>
         </a>
     </section>
     
-    </section>
+    </section> -->
     <section class="about">
         <h2>About Us</h2>
-        <p>Our Website has been providing top-notch healthcare services for over a decade, with a focus on patient care and innovation.</p>
+        <p>Our website has been providing top-notch healthcare services for over a decade, with a focus on patient care and innovation.</p>
     </section>
     <section class="form-container">
         <h2>Book an Appointment</h2>
@@ -305,7 +269,7 @@
         <button>Retrieve Records</button>
     </section>
     <footer>
-        <p>EdHealth. All rights reserved.</p>
+        <p>EdHeatlh. All Rights Reserved</p>
     </footer>
     <script>
         // Blur and add text to the hero image
@@ -321,7 +285,7 @@
             
             var textContainer = document.createElement('div');
             textContainer.classList.add('text-container');
-            textContainer.innerHTML = '<h2 style="color: white; font-size: 24px;">"Empowering rural communities through accessible and holistic education and health services."</h2>';
+            textContainer.innerHTML = '<h2 style="color: white; font-size: 24px;">"Empowering rural communities through accessible and holistic education and health services for sustainable development."</h2>';
             hero.appendChild(textContainer);
         });
     </script>
